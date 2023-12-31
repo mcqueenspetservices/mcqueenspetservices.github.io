@@ -83,10 +83,6 @@ body {
   width: 200px;
   height: 150px;
   position: relative;
-  background-image: url('Assets/logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .navigationBar .circle::before {
@@ -101,7 +97,10 @@ body {
 }
 
 .navigationBar img {
-  display:none;
+  height: 125px;
+  width: 125px;
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (min-width: 800px) {
