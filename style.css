@@ -120,17 +120,26 @@ body {
     padding: 10px 0;
     flex-direction: row;
   }
+
   .navigationBar .navText a.navLink {
-    display: inline-block; /* Change this to inline-block */
+    display: none;
+  }
+
+  .navigationBar .navText a.navLink[href="packages.html"],
+  .navigationBar .navText a.navLink[href="#contactme"] {
+    display: inline-block;
     margin: 0 10px; /* Adjust the margin as needed */
   }
+
   .navigationBar .navText a i {
     display: none; /* Hide the icons */
   }
+
   .navigationBar img {
     max-width: 70px;
     max-height: 70px;
   }
+
   .navigationBar .circle {
     width: 80px;
     height: 80px;
