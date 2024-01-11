@@ -121,11 +121,11 @@ body {
     flex-direction: row;
   }
   .navigationBar .navText a.navLink {
-    display: none;
+    display: inline-block; /* Change this to inline-block */
+    margin: 0 10px; /* Adjust the margin as needed */
   }
   .navigationBar .navText a i {
-    display: inline-block;
-    transform: translateY(0px);
+    display: none; /* Hide the icons */
   }
   .navigationBar img {
     max-width: 70px;
