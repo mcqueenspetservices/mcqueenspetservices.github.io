@@ -129,6 +129,7 @@ body {
   .navigationBar .navText a.navLink[href="#contactme"] {
     display: inline-block;
     margin: 0 10px; /* Adjust the margin as needed */
+    translateY: 10px;
   }
 
   .navigationBar .navText a i {
