@@ -120,17 +120,27 @@ body {
     padding: 10px 0;
     flex-direction: row;
   }
+
   .navigationBar .navText a.navLink {
     display: none;
   }
-  .navigationBar .navText a i {
+
+  .navigationBar .navText a.navLink[href="index.html#schedule"],
+  .navigationBar .navText a.navLink[href="#contactme"] {
     display: inline-block;
-    transform: translateY(0px);
+    margin: 0 10px; /* Adjust the margin as needed */
+    translateY: 10px;
   }
+
+  .navigationBar .navText a i {
+    display: none; /* Hide the icons */
+  }
+
   .navigationBar img {
     max-width: 70px;
     max-height: 70px;
   }
+
   .navigationBar .circle {
     width: 80px;
     height: 80px;
