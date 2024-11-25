@@ -45,7 +45,7 @@ function createCalendar(year, month, nonAvailabilityDates) {
     }
     let className = '';
     if (status === "Booked") className = 'booked';
-    else if (status === "Holiday" || status === "Christmas Eve" || status === "Christmas Day") className = 'holiday';
+    else if (status === "Holiday" || status === "Christmas Eve" || status === "Christmas Day"|| status === "Boxing Day"|| status === "New Years Eve"|| status === "New Years Day") className = 'holiday';
     else if (status === "Not Available") className = 'not-available';
 
     html += `<td class="${className}"><div class="date">${i}</div> <div class="status">${status}</div></td>`;
