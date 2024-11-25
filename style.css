@@ -16,8 +16,8 @@ body {
 }
 
 .header-welcome-container { 
+    width: 100%;
     background-image: url('Images/PawPrintBanner.png'); 
-    background-position: center; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
     background-color: #E0F7FA;
@@ -37,16 +37,10 @@ body {
     padding-left: 20%;
     padding-bottom: 10px;
     height: 100px;
-	left: -40px;
-}
-
-.fixed-header img {
-	padding-left: 40px
 }
 
 .fixed-header img:hover + .underline {
     background-color: #34B8FC;
-    margin-top: 10px;
 	margin-left: 40px
 }
 
@@ -68,6 +62,36 @@ body {
     margin-top: 90px;
     padding-top: 0;
     line-height: 0.1;
+}
+
+a {
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Inherit the text color from the parent */
+}
+
+a:hover {
+    color: inherit; /* Ensure color remains the same on hover */
+}
+
+a:visited {
+    color: inherit; /* Ensure color remains the same for visited links */
+}
+
+a .text, a .arrow {
+    color: inherit; /* Ensure child elements inherit the color */
+}
+
+/* Add this to your CSS file */
+.section {
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    display: block;
+    height: 125px; /* Adjust this value to be the height of your header */
+    margin-top: -100px; /* Same value as height */
+    visibility: hidden;
 }
 
 .popular-items {
@@ -291,5 +315,5 @@ body {
 .bottom-box {
 	width: 100%;
 	background-color: #E0F7FA;
-	height: 100px;
+	height: 500px;
 }
