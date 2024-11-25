@@ -3,19 +3,25 @@ const monthYear = document.querySelector('.month-year');
 const prevMonthButton = document.querySelector('.button:first-child');
 const nextMonthButton = document.querySelector('.button:last-child');
 
-const nonAvailabilityDates = {
-  2024: {
-      11: { // December
-          24: "Christmas Eve", // Christmas Eve
-          25: "Christmas Day", // Christmas Day
-      }
-  }
-};
-
 let currentYear = new Date().getFullYear();
 let currentMonth = new Date().getMonth();
 
-function createCalendar(year, month) {
+fetch('bookings.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(nonAvailabilityDates => {
+    createCalendar(currentYear, currentMonth, nonAvailabilityDates);
+  })
+  .catch(error => {
+    console.error('There has been a problem with your fetch operation:', error);
+    calendarBody.innerHTML = '<p>Failed to load calendar data.</p>';
+  });
+
+function createCalendar(year, month, nonAvailabilityDates) {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const firstDay = new Date(year, month, 1).getDay();
@@ -34,7 +40,7 @@ function createCalendar(year, month) {
         const dayOfWeek = (firstDay + i - 1) % 7;
         let status = nonAvailabilityDates[year] && nonAvailabilityDates[year][month] && nonAvailabilityDates[year][month][i] ? nonAvailabilityDates[year][month][i] : '';
         if (dayOfWeek === 2 || dayOfWeek === 3) { // Tuesday or Wednesday
-            status = status || "Booked"; // Mark as Booked if no other status
+            status = status || "Not Available"; // Mark as Booked if no other status
         }
         let className = '';
         if (status === "Booked") className = 'booked';
@@ -73,5 +79,3 @@ function changeMonth(offset) {
 
 prevMonthButton.addEventListener('click', () => changeMonth(-1));
 nextMonthButton.addEventListener('click', () => changeMonth(1));
-
-createCalendar(currentYear, currentMonth);
