@@ -26,9 +26,31 @@
         "30": "Booked"
       },
       "11": {
+        "1": "Booked",
+        "2": "Booked",
+        "5": "Booked",
+        "6": "Booked",
+        "7": "Booked",
+        "8": "Booked",
+        "9": "Booked",
+        "12": "Booked",
+        "13": "Booked",
+        "14": "Booked",
+        "15": "Booked",
+        "16": "Booked",
+        "19": "Booked",
+        "20": "Booked",
+        "21": "Booked",
+        "22": "Booked",
+        "23": "Booked",
         "24": "Christmas Eve",
-        "25": "Christmas Day"
+        "25": "Christmas Day",
+        "26": "Boxing Day",
+        "27": "Christmas Day",
+        "28": "Booked",
+        "29": "Booked",
+        "30": "Booked",
+        "31": "New Years Eve"
       }
     }
   }
-  
