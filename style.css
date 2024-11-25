@@ -41,7 +41,7 @@ body {
 
 .fixed-header img:hover + .underline {
     background-color: #34B8FC;
-	margin-left: 40px
+    margin-top: 5px;
 }
 
 .welcome-box {
