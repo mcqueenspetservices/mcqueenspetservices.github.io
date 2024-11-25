@@ -334,7 +334,7 @@ a .text, a .arrow {
     }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 900px) { 
     .welcome-box, 
     .popular-items, 
     .about-us, 
