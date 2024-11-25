@@ -106,6 +106,15 @@ a .text, a .arrow {
 	color: #34B8FC;
 }
 
+.popular-items .row a:hover h1 {
+    color: #1E3A8A;
+}
+
+.popular-items .row a:hover ~ h1, 
+.popular-items .row a:hover ~ .arrow h1 {
+    color: #1E3A8A;
+}
+
 .popular-items h2 {
 	font-size: 36px;
     line-height: 0.1;
@@ -325,7 +334,7 @@ a .text, a .arrow {
     }
 }
 
-@media (max-width: 1000px) { 
+@media (max-width: 768px) { 
     .welcome-box, 
     .popular-items, 
     .about-us, 
