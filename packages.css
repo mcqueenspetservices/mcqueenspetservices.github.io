@@ -136,10 +136,11 @@ body {
 	height: 500px;
 }
 
-@media (max-width: 768px) { 
-    .contact-me, 
-    .divider, 
-    .bottom-divider { 
+@media (max-width: 1000px) { 
+	.packages,
+	.contact-me, 
+	.divider, 
+	.bottom-divider { 
         width: 90%; 
         padding-left: 5%; 
     } 
